@@ -90,7 +90,7 @@ button:active {
     background-color: #edf0f1;
     height: 100%;
     width: 100%;
-    padding: 10% 20%;
+    padding: 5% 20%;
 
     display: flex;
     flex-direction: row;
@@ -102,7 +102,7 @@ button:active {
     border-radius: 10px 10px;
     padding: 20px 20px;
     background-color: #e7e7e7;
-    margin: 3%;
+    margin: 3% 2%;
     transform: translateY(100px);
     opacity: 0;
     transition: 0.25s;
@@ -127,7 +127,7 @@ button:active {
 }
 
 .main-top-left{
-    margin: 70% 0px;
+    margin: 60% 0px;
     transform: translateY(-100px);
     transition: 0.5s;
     opacity: 0;
@@ -147,7 +147,7 @@ button:active {
 
 .grids {
     display: grid;
-    grid-template-rows: 40vw 90vw 20vw;
+    grid-template-rows: 33vw 90vw 20vw;
     grid-template-columns: 100%;
 }
 .grid1 {
@@ -166,3 +166,4 @@ button:active {
 .dois{
     margin: auto;
 }
+
