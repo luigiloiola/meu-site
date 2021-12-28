@@ -26,7 +26,9 @@
                 <div class = "grid1">
                     <div class ="inner-grid-top">
                         <div class ="main-top-left">
-                            <div class ="texto">texto texto texto
+                            <div class ="texto" style="white-space: pre-line">
+                                texto texto
+                                texto
                             </div>
                             <div><button class = "main-button">outro botao</button></div>
                         </div>
@@ -62,28 +64,7 @@
                 </div>
             </div>
         </main>
-        <script>
-            const cards = document.querySelectorAll('.cards');
-            const main_top_left = document.querySelector('.main-top-left');
-            const cardsobserver = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    entry.target.classList.toggle("showUpwards", entry.isIntersecting);
-                })
-            },{
-                threshold:0.3
-            })
-            const main_top_left_sobserver = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    entry.target.classList.toggle("showDownwards", entry.isIntersecting);
-                })
-            },{
-                threshold:1
-            })
-            cards.forEach(card => {
-                cardsobserver.observe(card);
-            })
-            main_top_left_sobserver.observe(main_top_left);
-        </script>
+        <script scr = "code.js"></script>
         <footer>
 
         </footer>
