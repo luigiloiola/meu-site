@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>site do loiola</title>
+        <script src="code.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <a href="page2.html" class = "logo">logo</a>
+            <nav>
+                <ul class = "links-conteiner">
+                    <li><a href="page2.html">link1</a></li>
+                    <li><a href="page2.html">link2</a></li>
+                    <li><a href="page2.html">link3</a></li>
+                    <li><a href="page2.html">...</a></li>
+                </ul>
+            </nav>
+            <a class = "cta" href="#"><button>botao</button></a>
+        </header>
+        <main>
+            <div class = "grids">
+                <div class = "grid1">
+                    <div class ="inner-grid-top">
+                        <div class ="main-top-left">
+                            <div class ="texto">texto texto texto
+                            </div>
+                            <div><button class = "main-button">outro botao</button></div>
+                        </div>
+                        <div class ="main-top-right"></div>
+                    </div>
+                </div>
+                <div class = "grid2">
+                    <div class = "inner-grid-mid">
+                        <div class ="containers1">
+                            <div class = "cards">
+                                <div class = "titulo-cartao"><h2>titulo</h2></div>
+                                <button class = "containers-button">outro botao</button>
+                            </div>
+                            <div class = "cards">
+                                <div class = "titulo-cartao"><h2>titulo</h2></div>
+                                <button class = "containers-button">outro botao</button>
+                            </div>                       
+                        </div>
+                        <div class ="containers2">
+                            <div class = "cards">
+                                <div class = "titulo-cartao"><h2>titulo</h2></div>
+                                <button class = "containers-button">outro botao</button>
+                            </div>
+                            <div class = "cards">
+                                <div class = "titulo-cartao"><h2>titulo</h2></div>
+                                <button class = "containers-button">outro botao</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "grid3">
+                    rodape
+                </div>
+            </div>
+        </main>
+        <script>
+            const cards = document.querySelectorAll('.cards');
+            const main_top_left = document.querySelector('.main-top-left');
+            const cardsobserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("showUpwards", entry.isIntersecting);
+                })
+            },{
+                threshold:0.3
+            })
+            const main_top_left_sobserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("showDownwards", entry.isIntersecting);
+                })
+            },{
+                threshold:1
+            })
+            cards.forEach(card => {
+                cardsobserver.observe(card);
+            })
+            main_top_left_sobserver.observe(main_top_left);
+        </script>
+        <footer>
+
+        </footer>
+    </body>
+</html>
