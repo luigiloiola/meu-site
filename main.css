@@ -71,7 +71,6 @@ button:active {
 .texto {
     color: #edf0f1;
     font-size: 40px;
-    margin: auto;
 }
 .titulo-cartao {
     color: #181818;
@@ -97,17 +96,19 @@ button:active {
 }
 
 .cards {
-    height: 30vw;
+    height: 30vw; 
     border-style: none;
     border-radius: 10px 10px;
     padding: 20px 20px;
     background-color: #e7e7e7;
     margin: 3% 2%;
+
     transform: translateY(100px);
+    transition: 0.5s;
     opacity: 0;
-    transition: 0.25s;
 }
-.cards.showUpwards {
+
+.cards.visible {
     transform: translateY(0);
     opacity: 1;
 }
@@ -127,16 +128,21 @@ button:active {
 }
 
 .main-top-left{
-    margin: 60% 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top:auto;
+    padding-bottom: 25%;
+
+
     transform: translateY(-100px);
     transition: 0.5s;
     opacity: 0;
 }
-
-.main-top-left.showDownwards {
+.main-top-left.visible {
     transform: translateY(0);
     opacity: 1;
 }
+
 
 .main-top-right {
     text-align: center;
@@ -151,6 +157,7 @@ button:active {
     grid-template-columns: 100%;
 }
 .grid1 {
+    display: flex;
     background-color: #24252A;
 }
 .grid2 {
@@ -166,4 +173,3 @@ button:active {
 .dois{
     margin: auto;
 }
-
